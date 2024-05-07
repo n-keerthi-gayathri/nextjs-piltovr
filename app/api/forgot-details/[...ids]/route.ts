@@ -4,7 +4,7 @@ export async function GET( req: any, {params}: any) {
     const email = params.ids[0];
     console.log(email);
     try {
-        const results = await new Promise((resolve, reject) => {
+        const results: any = await new Promise((resolve, reject) => {
             db.query("SELECT * FROM user_data WHERE email = ?", [email],(err: any, data1: []) => {
                 if(err){
                     reject(err);

@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 export default function ForgotDetails(){
     const [email, setEmail] = useState('');
-    const [data, setData] = useState(null);
+    const [data, setData] = useState<any[] | null>(null);
     const [exist,setExist] = useState(null);
     const handleSubmit = async (e: { preventDefault: () => void; }) => {
         e.preventDefault();
@@ -43,7 +43,7 @@ export default function ForgotDetails(){
                 <button type="submit">Get Details</button>
         </form>
         {
-            (data != null) ?
+            (data && data.length > 0) ?
             <>
             <h2>Here are your details...</h2>
             <h4>Name: {data[0].full_name}</h4>
