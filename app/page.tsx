@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useState } from "react";
 
 export default function Home(){
-  const [data, setData] = useState(null);
+  const [data, setData] = useState<any[] | null>(null);
   const handleClick = async (e: { preventDefault: () => void; }) => {
     
     e.preventDefault();
