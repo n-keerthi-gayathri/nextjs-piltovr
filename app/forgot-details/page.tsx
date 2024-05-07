@@ -1,6 +1,6 @@
 "use client"
 import React, { useState } from 'react';
-export default function forgotDetails(){
+export default function ForgotDetails(){
     const [email, setEmail] = useState('');
     const [data, setData] = useState(null);
     const [exist,setExist] = useState(null);
